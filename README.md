@@ -5,7 +5,7 @@
 
 ## 받는 방법
 
-### 방법 1: ZIP 으로 받기 (git 설치 필요 없음, 권장)
+### 방법 1: ZIP 으로 받기 (git 설치 필요 없음)
 1. 이 저장소 화면의 초록색 **Code** 버튼 → **Download ZIP**
 2. 압축 파일을 `C:\blockchain` 에 풀기 (zip 안에서 바로 열지 않기)
 3. 풀린 폴더 이름이 `hardhat-test-main` 이면 → `hardhat-test` 로 이름 바꾸기
