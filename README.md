@@ -53,8 +53,9 @@ npm ci
 | 로컬 노드 실행 (터미널 1) | `npx hardhat node` | `npm run node` |
 | 로컬 배포 (터미널 2) | `npx hardhat ignition deploy ignition/modules/Counter.ts --network localhost` | `npm run deploy:local` |
 | ethers.js 호출 | `node scripts/interact.js` | `npm run interact` |
-| 0에서 1 빼기 (V2) | `node scripts/subtract.js` | |
 | Sepolia 배포 | `npx hardhat ignition deploy ignition/modules/Counter.ts --network sepolia` | `npm run deploy:sepolia` |
+| Sepolia 재배포 (V2) | `npx hardhat ignition deploy ignition/modules/Counter.ts --network sepolia --reset` | |
+| 0에서 1 빼기 (V2, Sepolia) | `$env:PRIVATE_KEY = "개인 키"` 후 `node scripts/subtract.js` | |
 
 ## 3. 작성할 파일 (Counter)
 - `contracts/Counter.sol`
@@ -68,8 +69,8 @@ npm ci
 | ① 컨트랙트 작성 | `contracts/Storage.sol` (contract 이름은 다른 파일과 겹치지 않게) |
 | ② 배포 모듈 작성 | `ignition/modules/Storage.ts` (모듈 이름 `"StorageModule"` 도 겹치지 않게) |
 | ③ 컴파일 | `npx hardhat build` → `Compiled 2 Solidity files` |
-| ④ 배포 | `npx hardhat ignition deploy ignition/modules/Storage.ts --network localhost` |
-| ⑤ 호출 | `scripts/interact-storage.js` 작성 → `node scripts/interact-storage.js` |
+| ④ 배포 | `npx hardhat ignition deploy ignition/modules/Storage.ts --network sepolia` |
+| ⑤ 호출 | `scripts/interact-storage.js` 작성 → `$env:PRIVATE_KEY = "개인 키"` 후 `node scripts/interact-storage.js` |
 | (부록) 테스트 | `test/Storage.ts` → 이 파일만 실행: `npx hardhat test test/Storage.ts` |
 
 ### 주의
