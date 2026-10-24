@@ -77,3 +77,24 @@ npm ci
 - 한 파일이라도 문법 오류가 있으면 **전체 build 실패** (`HHE910: Compilation failed`)
 - 같은 contract 이름이 두 파일에 있으면 `HHE1001: There are multiple artifacts …`
 - `--reset` 은 그 네트워크의 **모든** 배포 기록을 지움 → 다른 컨트랙트(Storage 등)도 다시 배포해야 함
+
+## 5. 웹 페이지 (HTML + ethers.js + MetaMask)
+| 할 일 | 파일 / 명령 |
+|---|---|
+| 웹 페이지 작성 | `web/counter.html` (web 폴더를 새로 만들기) |
+| 웹 서버 실행 (터미널 하나 더, 끄지 않기) | `node scripts/serve.js` |
+| 브라우저 (MetaMask 를 Sepolia 로) | `http://localhost:3000/web/counter.html` |
+- `scripts/serve.js` 는 수정하지 않음. `file://` 로 연 페이지에서는 MetaMask 가 동작하지 않아서 웹 서버로 엶
+- 이 Starter 를 전에 받았다면: git clone 으로 받은 경우 `git pull`, ZIP 으로 받은 경우 `scripts/serve.js` 만 새로 받기
+
+## 6. 새 프로젝트 만들기 (홀짝 게임부터: hardhat-test2)
+```
+cd C:\blockchain
+git clone https://github.com/Inhatc-BlockChain/hardhat-test.git hardhat-test2
+cd hardhat-test2
+npm ci
+```
+- ZIP 으로 받는 경우: 압축을 한 번 더 풀고 폴더 이름을 `hardhat-test2` 로
+- VS Code → File → Open Folder → `hardhat-test2` (새 창), 명령을 치기 전에 터미널 경로가 `…\hardhat-test2>` 인지 확인
+- 프로젝트마다 따로: node_modules, contracts, artifacts, 배포 기록(ignition/deployments)
+- 모든 프로젝트가 같이 씀: keystore (다시 set 할 필요 없음), MetaMask 계정, Sepolia 에 배포된 컨트랙트
