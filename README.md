@@ -90,11 +90,12 @@ npm ci
 ## 6. 새 프로젝트 만들기 (홀짝 게임부터: hardhat-test2)
 ```
 cd C:\blockchain
-git clone https://github.com/Inhatc-BlockChain/hardhat-test.git hardhat-test2
+git clone https://github.com/Inhatc-BlockChain/hardhat-test2.git
 cd hardhat-test2
 npm ci
 ```
-- ZIP 으로 받는 경우: 압축을 한 번 더 풀고 폴더 이름을 `hardhat-test2` 로
+- 두 번째 Starter 저장소: github.com/Inhatc-BlockChain/hardhat-test2 (홀짝 게임, 투표 컨트랙트와 serve.js 가 들어 있음)
+- ZIP 으로 받는 경우: 폴더 이름이 `hardhat-test2-main` 이면 `hardhat-test2` 로
 - VS Code → File → Open Folder → `hardhat-test2` (새 창), 명령을 치기 전에 터미널 경로가 `…\hardhat-test2>` 인지 확인
 - 프로젝트마다 따로: node_modules, contracts, artifacts, 배포 기록(ignition/deployments)
 - 모든 프로젝트가 같이 씀: keystore (다시 set 할 필요 없음), MetaMask 계정, Sepolia 에 배포된 컨트랙트
