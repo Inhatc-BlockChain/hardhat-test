@@ -81,11 +81,12 @@ npm ci
 ## 5. 웹 페이지 (HTML + ethers.js + MetaMask)
 | 할 일 | 파일 / 명령 |
 |---|---|
-| 웹 페이지 작성 | `web/counter.html` (web 폴더를 새로 만들기) |
+| 웹 페이지 (제공, 읽고 실행) | `web/counter.html` |
+| 연습: add(n) 버튼 추가 | `web/counter.html` 을 직접 고치기 |
 | 웹 서버 실행 (터미널 하나 더, 끄지 않기) | `node scripts/serve.js` |
 | 브라우저 (MetaMask 를 Sepolia 로) | `http://localhost:3000/web/counter.html` |
 - `scripts/serve.js` 는 수정하지 않음. `file://` 로 연 페이지에서는 MetaMask 가 동작하지 않아서 웹 서버로 엶
-- 이 Starter 를 전에 받았다면: git clone 으로 받은 경우 `git pull`, ZIP 으로 받은 경우 `scripts/serve.js` 만 새로 받기
+- 이 Starter 를 전에 받았다면: git clone 으로 받은 경우 `git pull`, ZIP 으로 받은 경우 `scripts/serve.js`, `web/counter.html` 만 새로 받기
 
 ## 6. 새 프로젝트 만들기 (홀짝 게임부터: hardhat-test2)
 ```
@@ -94,7 +95,7 @@ git clone https://github.com/Inhatc-BlockChain/hardhat-test2.git
 cd hardhat-test2
 npm ci
 ```
-- 두 번째 Starter 저장소: github.com/Inhatc-BlockChain/hardhat-test2 (홀짝 게임, 투표 컨트랙트와 serve.js 가 들어 있음)
+- 두 번째 Starter 저장소: github.com/Inhatc-BlockChain/hardhat-test2 (홀짝 게임, 투표 컨트랙트와 웹 페이지, serve.js 가 들어 있음)
 - ZIP 으로 받는 경우: 폴더 이름이 `hardhat-test2-main` 이면 `hardhat-test2` 로
 - VS Code → File → Open Folder → `hardhat-test2` (새 창), 명령을 치기 전에 터미널 경로가 `…\hardhat-test2>` 인지 확인
 - 프로젝트마다 따로: node_modules, contracts, artifacts, 배포 기록(ignition/deployments)
